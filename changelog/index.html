@@ -1,0 +1,3507 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../api_reference/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Changelog - pytest_cases</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#changelog" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="pytest_cases" class="md-header__button md-logo" aria-label="pytest_cases" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            pytest_cases
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Changelog
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/smarie/python-pytest-cases" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="pytest_cases" class="md-nav__button md-logo" aria-label="pytest_cases" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    pytest_cases
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/smarie/python-pytest-cases" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Examples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pytest_goodies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    pytest goodies
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unions_theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    fixture unions theory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api_reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Changelog
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Changelog
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#3100-in-progress-new-with_case_tags-decorator" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.10.0 - (in progress) New with_case_tags decorator
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#391-support-for-python-314-and-pytest-84" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.9.1 - support for python 3.14 and pytest 8.4
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#390-yanked-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.9.0 - yanked version
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#386-compatibility-fix" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.8.6 - compatibility fix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#385-suppressed-annoying-warning-with-pytest-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.8.5 - Suppressed annoying warning with pytest 8
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#384-removed-debug-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.8.4 - Removed debug logs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#383-support-for-pytest-version-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.8.3 - Support for pytest version 8
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#382-bugfixes-and-project-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.8.2 - bugfixes and project improvements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#381-bugfixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.8.1 - bugfixes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#380-async-generators-and-strict-markers" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.8.0 - async, generators and strict-markers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#370-python-312" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.7.0 - python 3.12
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3614-bugfixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.14 - bugfixes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3613-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.13 - bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3612-type-hint-fix-enhanced-compatibility-with-pytest-plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.12 - type hint fix + enhanced compatibility with pytest plugins
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3611-bugfix-for-pytest-xdist-and-get_all_cases-api-improvement" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.11 - bugfix for pytest-xdist and get_all_cases API improvement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3610-bugfix-for-pytest-71" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.10 - bugfix for pytest 7.1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#369-bugfix-with-pytest-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.9 - Bugfix with pytest 7
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#368-bugfix-support-for-multiprocessing-pool" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.8 - Bugfix: support for multiprocessing Pool
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#367-minor-improvements-and-preparing-for-pytest-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.7 - Minor improvements and preparing for pytest 7
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#366-layout-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.6 - Layout change
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#365-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.5 - Bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#364-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.4 - Bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#363-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.3 - Bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#362-qualimetry" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.2 - Qualimetry
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#361-bugfix-parametrizing-a-class-with-parametrize" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.1 - bugfix - parametrizing a class with @parametrize
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#360-unpack_fixtures-in-classes-current_cases-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.0 - unpack_fixtures in classes + current_cases improvements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#352-bugfix-with-the-currentcases-fixture" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5.2 - bugfix with the currentcases fixture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#351-python-310-compatibility-improved-error-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5.1 - python 3.10 compatibility + improved error message
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#350-new-current_cases-fixture-and-get_current_cases-function-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5.0 - New current_cases fixture and get_current_cases function + Fixes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#346-increased-compatibility-with-other-plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4.6 - Increased compatibility with other plugins
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#345-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4.5 - Bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#344-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4.4 - Bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#343-technical-release-zenodo" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4.3 - Technical release - Zenodo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#340-goodbye-v1-api-support-for-unbound-cases-bugfix-with-marks-fixtures-in-case-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4.0 - Goodbye v1 API + Support for unbound cases + Bugfix with marks + Fixtures in case files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#330-filter-helpers-current-id-getter-support-for-pytest-asyncio-and-other-plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.0 - Filter helpers, Current id getter, Support for pytest-asyncio and other plugins
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#321-fixture-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.1 - @fixture Bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#320-automatic-fixture_ref-test-ordering-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.0 - Automatic fixture_ref + test ordering bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#312-bugfixes-with-nesting-and-pytest-asyncio" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.2 - Bugfixes with nesting and pytest-asyncio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#311-bugfix-with-ids" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.1 - Bugfix with ids
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#310-improved-cases-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.0 - Improved cases collection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#300-harmonization-of-ids-and-public-api-for-cases-info" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.0.0 - harmonization of ids and public API for cases info
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#272-bugfix-with-doctest" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.7.2 - Bugfix with doctest
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#271-pytestmarkusefixtures-can-be-used-on-case-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.7.1 - @pytest.mark.usefixtures can be used on case functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#270-parametrize_with_cases-now-supports-id-customization" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.7.0 - @parametrize_with_cases now supports id customization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#260-better-cache-for-lazy-values-and-support-for-infinite-id-generators" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6.0 - better cache for lazy values and support for infinite id generators
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#250-case-ids-glob-match-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5.0 - case ids glob match improvements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#240-various-fixes-for-test-ids-and-lazy-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4.0 - various fixes for test ids and lazy values
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#230-better-lazyvalue-internal-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3.0 - better LazyValue internal API
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#225-marks-are-now-correctly-propagated-from-case-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.5 - Marks are now correctly propagated from Case class
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#224-fixes-issue" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.4 - Fixes issue
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#223-fixed-issue-with-pytest-3x" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.3 - Fixed issue with pytest 3.X
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#222-parametrize_with_cases-compatibility-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.2 - @parametrize_with_cases compatibility improvements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#221-setuppy-fix-to-enforce-dependency-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.1 - setup.py fix to enforce dependency version
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#220-doc-improvements-bugfix-for-cases-requiring-fixtures" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.0 - Doc improvements + bugfix for cases requiring fixtures
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#213-missing-deprecation-warning" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.3 - Missing deprecation warning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#212-compatibility-fix" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.2 - Compatibility fix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#211-fixed-issue-with-pytest-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.1 - Fixed issue with pytest 6
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#210-internal-engine-improvements-bugfixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.0 - Internal engine improvements + bugfixes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#204-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.4 - Bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#203-bugfixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.3 - Bugfixes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#202-better-string-representation-for-lazy-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.2 - Better string representation for lazy values
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#201-better-test-ids-and-theory-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.1 - Better test ids and theory page
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#200-less-boilerplate-full-pytest-alignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.0 - Less boilerplate &amp; full pytest alignment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1170-lazy_value-improvements-annoying-warnings-suppression" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.17.0 - lazy_value improvements + annoying warnings suppression
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1160-new-lazy_value-for-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.16.0 - New lazy_value for parameters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1150-better-parametrize_plus-and-smaller-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.15.0 - better parametrize_plus and smaller dependencies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1140-bugfixes-and-hook-feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.14.0 - bugfixes and hook feature
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1131-packaging-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.13.1 - packaging improvements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1130-cases_generator-default-names" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.13.0 - @cases_generator default names
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1124-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.12.4 - Bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1123-improved-error-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.12.3 - Improved error messages
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1122-warning-fix" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.12.2 - Warning fix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1121-bugfixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.12.1 - Bugfixes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1120-better-test-ids-for-parametrized-tests-with-fixture-refs-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.12.0 - better test ids for parametrized tests with fixture refs + bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1119-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.11.9 - bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1118-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.11.8 - bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1117-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.11.7 - bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1116-pyprojecttoml" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.11.6 - pyproject.toml
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1115-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.11.5 - bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1114-python-2-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.11.4 - python 2 bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1113-minor-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.11.3 - minor improvements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1112-increased-tolerance-to-other-plugins-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.11.2 - Increased tolerance to other plugins + bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1111-added-six-dependency-explicitly" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.11.1 - Added six dependency explicitly
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1110-fixture_ref-can-now-be-used-inside-tuples-leading-to-cross-products" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.11.0 - fixture_ref can now be used inside tuples, leading to cross-products
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1102-more-intuitive-error-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.10.2 - More intuitive error messages
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1101-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.10.1 - Bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1100-new-feature-fixtures-unpacking" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.10.0 - New feature: fixtures unpacking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#193-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.9.3 - Bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#192-bugfix-with-pytest-37" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.9.2 - Bugfix with pytest 3.7
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#191-bugfix-with-pytest-37" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.9.1 - Bugfix with pytest 3.7
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#190-new-with-reorder-commandline-option" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.9.0 - New --with-reorder commandline option
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#181-bugfixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.8.1 - BugFixes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#180-better-ids-for-fixture-unions" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.8.0 - Better ids for fixture unions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#170-new-pytest_parametrize_plus-allowing-fixture-references-to-be-used-in-parameter-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.7.0 - New @pytest_parametrize_plus allowing fixture references to be used in parameter values
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#163-minor-exception-enhancement" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.3 - Minor exception enhancement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#162-bug-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.2 - bug fixes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#161-pytest_fixture_plus-improvement-to-handle-not_used-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.1 - @pytest_fixture_plus improvement to handle NOT_USED cases
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#160-fixture_union-and-param_fixtures-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.0 - fixture_union and param_fixture[s] bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#151-param_fixtures-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5.1 - param_fixtures bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#150-new-helpers-param_fixture-and-param_fixtures" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5.0 - new helpers param_fixture and param_fixtures
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#142-parametrized-pytest_fixture_plus-minor-bug-fix" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4.2 - parametrized @pytest_fixture_plus minor bug fix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#141-parametrized-pytest_fixture_plus-minor-bug-fix" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4.1 - parametrized @pytest_fixture_plus minor bug fix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#140-pytest_fixture_plus-major-improvement" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4.0 - @pytest_fixture_plus major improvement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#133-parametrized-pytest_fixture_plus-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.3 - parametrized @pytest_fixture_plus Bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#132-parametrized-pytest_fixture_plus-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.2 - parametrized @pytest_fixture_plus Bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#131-minor-dependency-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.1 - Minor dependency change
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#130-more-flexible-case-generators-names-minor-dependency-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.0 - More flexible case generators names + Minor dependency change
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#122-fixed-bug-with-marks-on-cases-with-pytest-33" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.2 - fixed bug with marks on cases with pytest 3.3
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#121-fixed-id-of-test-cases-with-marks" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.1 - fixed id of test cases with marks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#120-pytestmark-can-be-used-on-cases-pytest_fixture_plus-parametrization-order-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.0 - @pytest.mark can be used on cases + @pytest_fixture_plus parametrization order bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#111-improved-generated-fixture-names-for-pytest_fixture_plus" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.1 - Improved generated fixture names for @pytest_fixture_plus
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#110-new-pytest_fixture_plus" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0 - New @pytest_fixture_plus
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#100-cases_fixture-pytest-2x-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0.0 - @cases_fixture + pytest 2.x support
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0101-minor-encoding-issue-in-setuppy" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.10.1 - minor encoding issue in setup.py
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0100-support-for-python-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.10.0 - support for python 2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#091-pytest-steps-is-now-an-independent-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.9.1 - pytest-steps is now an independent project
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#080-filtering-can-now-be-done-using-a-callable" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.8.0 - Filtering can now be done using a callable.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#070-hardcoded-cases-selection-and-multi-module-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.7.0 - Hardcoded cases selection, and multi-module selection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#060-case-parameters-and-better-test-suites" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.6.0 - Case parameters and better test suites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#050-support-for-test-suites" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.5.0 - support for test suites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#040-support-for-data-caching-with-lru_cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.4.0 - support for data caching with lru_cache
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#030-case-generators" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.3.0 - case generators
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#020-this_module-constant-taggingfiltering-doc" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.2.0 - THIS_MODULE constant + Tagging/Filtering + doc
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#010-first-public-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.1.0 - First public version
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#3100-in-progress-new-with_case_tags-decorator" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.10.0 - (in progress) New with_case_tags decorator
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#391-support-for-python-314-and-pytest-84" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.9.1 - support for python 3.14 and pytest 8.4
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#390-yanked-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.9.0 - yanked version
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#386-compatibility-fix" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.8.6 - compatibility fix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#385-suppressed-annoying-warning-with-pytest-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.8.5 - Suppressed annoying warning with pytest 8
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#384-removed-debug-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.8.4 - Removed debug logs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#383-support-for-pytest-version-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.8.3 - Support for pytest version 8
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#382-bugfixes-and-project-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.8.2 - bugfixes and project improvements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#381-bugfixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.8.1 - bugfixes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#380-async-generators-and-strict-markers" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.8.0 - async, generators and strict-markers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#370-python-312" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.7.0 - python 3.12
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3614-bugfixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.14 - bugfixes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3613-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.13 - bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3612-type-hint-fix-enhanced-compatibility-with-pytest-plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.12 - type hint fix + enhanced compatibility with pytest plugins
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3611-bugfix-for-pytest-xdist-and-get_all_cases-api-improvement" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.11 - bugfix for pytest-xdist and get_all_cases API improvement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3610-bugfix-for-pytest-71" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.10 - bugfix for pytest 7.1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#369-bugfix-with-pytest-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.9 - Bugfix with pytest 7
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#368-bugfix-support-for-multiprocessing-pool" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.8 - Bugfix: support for multiprocessing Pool
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#367-minor-improvements-and-preparing-for-pytest-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.7 - Minor improvements and preparing for pytest 7
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#366-layout-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.6 - Layout change
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#365-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.5 - Bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#364-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.4 - Bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#363-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.3 - Bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#362-qualimetry" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.2 - Qualimetry
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#361-bugfix-parametrizing-a-class-with-parametrize" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.1 - bugfix - parametrizing a class with @parametrize
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#360-unpack_fixtures-in-classes-current_cases-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.0 - unpack_fixtures in classes + current_cases improvements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#352-bugfix-with-the-currentcases-fixture" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5.2 - bugfix with the currentcases fixture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#351-python-310-compatibility-improved-error-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5.1 - python 3.10 compatibility + improved error message
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#350-new-current_cases-fixture-and-get_current_cases-function-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5.0 - New current_cases fixture and get_current_cases function + Fixes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#346-increased-compatibility-with-other-plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4.6 - Increased compatibility with other plugins
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#345-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4.5 - Bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#344-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4.4 - Bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#343-technical-release-zenodo" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4.3 - Technical release - Zenodo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#340-goodbye-v1-api-support-for-unbound-cases-bugfix-with-marks-fixtures-in-case-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4.0 - Goodbye v1 API + Support for unbound cases + Bugfix with marks + Fixtures in case files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#330-filter-helpers-current-id-getter-support-for-pytest-asyncio-and-other-plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.0 - Filter helpers, Current id getter, Support for pytest-asyncio and other plugins
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#321-fixture-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.1 - @fixture Bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#320-automatic-fixture_ref-test-ordering-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.0 - Automatic fixture_ref + test ordering bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#312-bugfixes-with-nesting-and-pytest-asyncio" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.2 - Bugfixes with nesting and pytest-asyncio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#311-bugfix-with-ids" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.1 - Bugfix with ids
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#310-improved-cases-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.0 - Improved cases collection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#300-harmonization-of-ids-and-public-api-for-cases-info" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.0.0 - harmonization of ids and public API for cases info
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#272-bugfix-with-doctest" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.7.2 - Bugfix with doctest
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#271-pytestmarkusefixtures-can-be-used-on-case-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.7.1 - @pytest.mark.usefixtures can be used on case functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#270-parametrize_with_cases-now-supports-id-customization" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.7.0 - @parametrize_with_cases now supports id customization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#260-better-cache-for-lazy-values-and-support-for-infinite-id-generators" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6.0 - better cache for lazy values and support for infinite id generators
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#250-case-ids-glob-match-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5.0 - case ids glob match improvements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#240-various-fixes-for-test-ids-and-lazy-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4.0 - various fixes for test ids and lazy values
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#230-better-lazyvalue-internal-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3.0 - better LazyValue internal API
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#225-marks-are-now-correctly-propagated-from-case-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.5 - Marks are now correctly propagated from Case class
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#224-fixes-issue" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.4 - Fixes issue
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#223-fixed-issue-with-pytest-3x" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.3 - Fixed issue with pytest 3.X
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#222-parametrize_with_cases-compatibility-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.2 - @parametrize_with_cases compatibility improvements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#221-setuppy-fix-to-enforce-dependency-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.1 - setup.py fix to enforce dependency version
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#220-doc-improvements-bugfix-for-cases-requiring-fixtures" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.0 - Doc improvements + bugfix for cases requiring fixtures
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#213-missing-deprecation-warning" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.3 - Missing deprecation warning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#212-compatibility-fix" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.2 - Compatibility fix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#211-fixed-issue-with-pytest-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.1 - Fixed issue with pytest 6
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#210-internal-engine-improvements-bugfixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.0 - Internal engine improvements + bugfixes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#204-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.4 - Bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#203-bugfixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.3 - Bugfixes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#202-better-string-representation-for-lazy-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.2 - Better string representation for lazy values
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#201-better-test-ids-and-theory-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.1 - Better test ids and theory page
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#200-less-boilerplate-full-pytest-alignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0.0 - Less boilerplate &amp; full pytest alignment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1170-lazy_value-improvements-annoying-warnings-suppression" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.17.0 - lazy_value improvements + annoying warnings suppression
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1160-new-lazy_value-for-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.16.0 - New lazy_value for parameters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1150-better-parametrize_plus-and-smaller-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.15.0 - better parametrize_plus and smaller dependencies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1140-bugfixes-and-hook-feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.14.0 - bugfixes and hook feature
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1131-packaging-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.13.1 - packaging improvements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1130-cases_generator-default-names" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.13.0 - @cases_generator default names
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1124-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.12.4 - Bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1123-improved-error-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.12.3 - Improved error messages
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1122-warning-fix" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.12.2 - Warning fix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1121-bugfixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.12.1 - Bugfixes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1120-better-test-ids-for-parametrized-tests-with-fixture-refs-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.12.0 - better test ids for parametrized tests with fixture refs + bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1119-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.11.9 - bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1118-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.11.8 - bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1117-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.11.7 - bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1116-pyprojecttoml" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.11.6 - pyproject.toml
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1115-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.11.5 - bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1114-python-2-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.11.4 - python 2 bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1113-minor-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.11.3 - minor improvements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1112-increased-tolerance-to-other-plugins-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.11.2 - Increased tolerance to other plugins + bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1111-added-six-dependency-explicitly" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.11.1 - Added six dependency explicitly
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1110-fixture_ref-can-now-be-used-inside-tuples-leading-to-cross-products" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.11.0 - fixture_ref can now be used inside tuples, leading to cross-products
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1102-more-intuitive-error-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.10.2 - More intuitive error messages
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1101-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.10.1 - Bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1100-new-feature-fixtures-unpacking" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.10.0 - New feature: fixtures unpacking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#193-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.9.3 - Bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#192-bugfix-with-pytest-37" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.9.2 - Bugfix with pytest 3.7
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#191-bugfix-with-pytest-37" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.9.1 - Bugfix with pytest 3.7
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#190-new-with-reorder-commandline-option" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.9.0 - New --with-reorder commandline option
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#181-bugfixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.8.1 - BugFixes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#180-better-ids-for-fixture-unions" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.8.0 - Better ids for fixture unions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#170-new-pytest_parametrize_plus-allowing-fixture-references-to-be-used-in-parameter-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.7.0 - New @pytest_parametrize_plus allowing fixture references to be used in parameter values
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#163-minor-exception-enhancement" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.3 - Minor exception enhancement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#162-bug-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.2 - bug fixes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#161-pytest_fixture_plus-improvement-to-handle-not_used-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.1 - @pytest_fixture_plus improvement to handle NOT_USED cases
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#160-fixture_union-and-param_fixtures-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.0 - fixture_union and param_fixture[s] bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#151-param_fixtures-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5.1 - param_fixtures bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#150-new-helpers-param_fixture-and-param_fixtures" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5.0 - new helpers param_fixture and param_fixtures
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#142-parametrized-pytest_fixture_plus-minor-bug-fix" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4.2 - parametrized @pytest_fixture_plus minor bug fix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#141-parametrized-pytest_fixture_plus-minor-bug-fix" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4.1 - parametrized @pytest_fixture_plus minor bug fix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#140-pytest_fixture_plus-major-improvement" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4.0 - @pytest_fixture_plus major improvement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#133-parametrized-pytest_fixture_plus-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.3 - parametrized @pytest_fixture_plus Bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#132-parametrized-pytest_fixture_plus-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.2 - parametrized @pytest_fixture_plus Bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#131-minor-dependency-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.1 - Minor dependency change
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#130-more-flexible-case-generators-names-minor-dependency-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.0 - More flexible case generators names + Minor dependency change
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#122-fixed-bug-with-marks-on-cases-with-pytest-33" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.2 - fixed bug with marks on cases with pytest 3.3
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#121-fixed-id-of-test-cases-with-marks" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.1 - fixed id of test cases with marks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#120-pytestmark-can-be-used-on-cases-pytest_fixture_plus-parametrization-order-bugfix" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.0 - @pytest.mark can be used on cases + @pytest_fixture_plus parametrization order bugfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#111-improved-generated-fixture-names-for-pytest_fixture_plus" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.1 - Improved generated fixture names for @pytest_fixture_plus
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#110-new-pytest_fixture_plus" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0 - New @pytest_fixture_plus
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#100-cases_fixture-pytest-2x-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0.0 - @cases_fixture + pytest 2.x support
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0101-minor-encoding-issue-in-setuppy" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.10.1 - minor encoding issue in setup.py
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0100-support-for-python-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.10.0 - support for python 2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#091-pytest-steps-is-now-an-independent-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.9.1 - pytest-steps is now an independent project
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#080-filtering-can-now-be-done-using-a-callable" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.8.0 - Filtering can now be done using a callable.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#070-hardcoded-cases-selection-and-multi-module-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.7.0 - Hardcoded cases selection, and multi-module selection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#060-case-parameters-and-better-test-suites" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.6.0 - Case parameters and better test suites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#050-support-for-test-suites" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.5.0 - support for test suites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#040-support-for-data-caching-with-lru_cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.4.0 - support for data caching with lru_cache
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#030-case-generators" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.3.0 - case generators
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#020-this_module-constant-taggingfiltering-doc" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.2.0 - THIS_MODULE constant + Tagging/Filtering + doc
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#010-first-public-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.1.0 - First public version
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h1>
+<h3 id="3100-in-progress-new-with_case_tags-decorator">3.10.0 - (in progress) New <code>with_case_tags</code> decorator<a class="headerlink" href="#3100-in-progress-new-with_case_tags-decorator" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Added the <code>with_case_tags</code> decorator for applying common tags to all cases
+  defined in a case class. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/351">#351</a>.
+  PR <a href="https://github.com/smarie/python-pytest-cases/pull/361">#361</a>
+  by <a href="https://github.com/michele-riva">@michele-riva</a>.</li>
+</ul>
+<h3 id="391-support-for-python-314-and-pytest-84">3.9.1 - support for python 3.14 and pytest 8.4<a class="headerlink" href="#391-support-for-python-314-and-pytest-84" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fixed <code>AttributeError: 'MiniMetafunc' object has no attribute '_params_directness'</code> when a case function is 
+  parametrized or requires a fixtures, with pytest 8.4.0. Fixed
+  <a href="https://github.com/smarie/python-pytest-cases/issues/365">#365</a></li>
+<li>Fixed <code>ValueError: The provided fixture function does not seem to be a fixture</code> with <code>@fixture_ref</code>  with pytest
+  8.4.0. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/364">#364</a></li>
+<li>Dropped support for <code>python&lt;3.9</code> and <code>pytest&lt;6</code>. Fixes
+  <a href="https://github.com/smarie/python-pytest-cases/issues/362">#362</a> and fixes
+  <a href="https://github.com/smarie/python-pytest-cases/issues/186">#186</a></li>
+<li>Fixed test suite for python 3.14, officializing the support for this version.</li>
+</ul>
+<h3 id="390-yanked-version">3.9.0 - yanked version<a class="headerlink" href="#390-yanked-version" title="Permanent link">&para;</a></h3>
+<p>This version was yanked. See 3.9.1.</p>
+<h3 id="386-compatibility-fix">3.8.6 - compatibility fix<a class="headerlink" href="#386-compatibility-fix" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fixed issue with legacy python 2.7 and 3.5. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/352">#352</a>.</li>
+</ul>
+<h3 id="385-suppressed-annoying-warning-with-pytest-8">3.8.5 - Suppressed annoying warning with pytest 8<a class="headerlink" href="#385-suppressed-annoying-warning-with-pytest-8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fixed <code>PytestRemovedIn9Warning: Marks applied to fixtures have no effect</code>. Fixed
+  <a href="https://github.com/smarie/python-pytest-cases/issues/337">#337</a></li>
+</ul>
+<h3 id="384-removed-debug-logs">3.8.4 - Removed debug logs<a class="headerlink" href="#384-removed-debug-logs" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Reverted <code>DEBUG</code> flag used for pytest 8 compatibility. Fixed
+  <a href="https://github.com/smarie/python-pytest-cases/issues/336">#336</a></li>
+</ul>
+<h3 id="383-support-for-pytest-version-8">3.8.3 - Support for <code>pytest</code> version 8<a class="headerlink" href="#383-support-for-pytest-version-8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fixed compliance with pytest 8. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/330">#330</a>. PR
+   <a href="https://github.com/smarie/python-pytest-cases/pull/335">#335</a> by <a href="https://github.com/smarie">smarie</a> and 
+   <a href="https://github.com/larsoner">larsoner</a>.</li>
+</ul>
+<h3 id="382-bugfixes-and-project-improvements">3.8.2 - bugfixes and project improvements<a class="headerlink" href="#382-bugfixes-and-project-improvements" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fixed issue with upcoming <code>pytest 8.1</code> release. PR 
+   <a href="https://github.com/smarie/python-pytest-cases/pull/322">#322</a> by 
+   <a href="https://github.com/bluetech">@bluetech</a></li>
+<li>Corrected API documentation (and comments) for the second file-name
+   pattern for <code>AUTO</code>-cases lookup (<code>cases_&lt;name&gt;.py</code> instead of
+   <code>case_&lt;name&gt;.py</code>). PR <a href="https://github.com/smarie/python-pytest-cases/pull/320">#320</a>
+   by <a href="https://github.com/michele-riva">@michele-riva</a>.</li>
+<li>Fixed <code>AssertionError</code> on <code>AUTO</code> cases outside a 'normal' test module.
+   Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/309">#309</a>. PR
+   <a href="https://github.com/smarie/python-pytest-cases/pull/320">#320</a> by
+   <a href="https://github.com/michele-riva">@michele-riva</a>.</li>
+<li>Improved error message in case of cases loading error in <code>@parametrize_with_cases</code> when the <code>cases</code> argument
+   is a string refering to a relative or absolute module name. Fixed <code>import file mismatch</code> with 
+   pytest 8 when executing our own tests. 
+   Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/323">#323</a>.</li>
+<li>Fixed failing tests in our builds due to the <code>event_loop_policy</code> fixture that appeared in <code>pytest-asyncio</code> <code>0.23</code>.
+   Fixes part of
+   <a href="https://github.com/smarie/python-pytest-cases/issues/321">#321</a>.</li>
+</ul>
+<h3 id="381-bugfixes">3.8.1 - bugfixes<a class="headerlink" href="#381-bugfixes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fixed <code>ScopeMismatch</code> with parametrized cases in non-trivial test
+   trees. <code>scope</code> is now correctly handled for (i) <code>fixture</code> cases, and
+   (ii) fixtures defined in <code>conftest.py</code> files at any depth. Fixes
+   <a href="https://github.com/smarie/python-pytest-cases/issues/311">#311</a>. PR
+   <a href="https://github.com/smarie/python-pytest-cases/pull/317">#317</a> by <a href="https://github.com/michele-riva">@michele-riva</a>.</li>
+</ul>
+<h3 id="380-async-generators-and-strict-markers">3.8.0 - async, generators and strict-markers<a class="headerlink" href="#380-async-generators-and-strict-markers" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>@fixture</code> and <code>@parametrize</code> are now async and generator aware. Fixes
+   <a href="https://github.com/smarie/python-pytest-cases/issues/286">#286</a>. PR
+   <a href="https://github.com/smarie/python-pytest-cases/pull/301">#301</a> by <a href="https://github.com/jgersti">jgersti</a>.</li>
+<li>Fixed error with <code>pytest</code> <code>--strict-markers</code>. Fixes
+   <a href="https://github.com/smarie/python-pytest-cases/issues/283">#283</a>. PR
+   <a href="https://github.com/smarie/python-pytest-cases/pull/300">#300</a> by <a href="https://github.com/chrsmcgrr">chrsmcgrr</a>.</li>
+</ul>
+<h3 id="370-python-312">3.7.0 - python 3.12<a class="headerlink" href="#370-python-312" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Added official support for Python 3.10, 3.11 and 3.12. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/314">#314</a></li>
+<li>Fixed <code>ModuleNotFoundError: distutils</code> on Python 3.12 thanks to <code>packaging</code>. PR
+   <a href="https://github.com/smarie/python-pytest-cases/pull/312">#312</a> by <a href="https://github.com/jayqi">@jayqi</a>. </li>
+<li>Internal: switched to virtualenv backend.</li>
+</ul>
+<h3 id="3614-bugfixes">3.6.14 - bugfixes<a class="headerlink" href="#3614-bugfixes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fixed <code>AttributeError</code> issue in <code>is_case_function</code> when an inspected symbol is a parametrized type hint
+   without <code>__name__</code>. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/287">#287</a></li>
+<li>Fixed issue with <code>get_all_cases</code>: default value for <code>cases</code> was wrong. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/290">#290</a></li>
+</ul>
+<h3 id="3613-bugfix">3.6.13 - bugfix<a class="headerlink" href="#3613-bugfix" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fixed issue where a lazy value (for example a case function) was not resolved before being injected in a parametrized function, and was therefore appearing as a <code>_LazyValueCaseParamValue</code>. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/274">#274</a></li>
+</ul>
+<h3 id="3612-type-hint-fix-enhanced-compatibility-with-pytest-plugins">3.6.12 - type hint fix + enhanced compatibility with pytest plugins<a class="headerlink" href="#3612-type-hint-fix-enhanced-compatibility-with-pytest-plugins" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Improved compatibility with other <code>pytest</code> plugins, in particular <code>pytest-repeat</code>, by supporting removal from fixture closure tree. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/269">#269</a>.</li>
+<li>Fixed type hint errors detected by <code>pyright</code>. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/270">#270</a></li>
+</ul>
+<h3 id="3611-bugfix-for-pytest-xdist-and-get_all_cases-api-improvement">3.6.11 - bugfix for pytest-xdist and <code>get_all_cases</code> API improvement<a class="headerlink" href="#3611-bugfix-for-pytest-xdist-and-get_all_cases-api-improvement" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>get_all_cases</code> can now be called without <code>parametrization_target</code> (defaulting to the caller module), and with an explicit module object. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/258">#258</a>. PR <a href="https://github.com/smarie/python-pytest-cases/pull/260">#260</a> by <a href="https://github.com/eddiebergman">@eddiebergman</a>.</li>
+<li>Fixed <code>AttributeError</code>: module 'pytest_cases' has no attribute 'CasesCollectionWarning' when running <code>pytest-xdist</code> and at least one cases class is ignored because of <code>__init__</code> or <code>__new__</code>. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/249">#249</a>.</li>
+</ul>
+<h3 id="3610-bugfix-for-pytest-71">3.6.10 - bugfix for pytest 7.1<a class="headerlink" href="#3610-bugfix-for-pytest-71" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fixed <code>ImportError</code> when using <code>pytest 7.1</code>. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/264">#264</a> and <a href="https://github.com/pytest-dev/pytest/issues/9762">pytest-dev#9762</a>.</li>
+</ul>
+<h3 id="369-bugfix-with-pytest-7">3.6.9 - Bugfix with pytest 7<a class="headerlink" href="#369-bugfix-with-pytest-7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fixed <code>FrozenInstanceError</code> when using <code>pytest 7.0.0</code>. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/251">#251</a>. <a href="https://github.com/smarie/python-pytest-cases/pull/253">PR#253</a> by <a href="https://github.com/jammer87">jammer87</a></li>
+</ul>
+<h3 id="368-bugfix-support-for-multiprocessing-pool">3.6.8 - Bugfix: support for multiprocessing Pool<a class="headerlink" href="#368-bugfix-support-for-multiprocessing-pool" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Suppressed warnings in our own tests, to improve packaging maintenance. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/248">#248</a></li>
+<li>Fixed bug where setting <code>ids</code> in <code>@parametrize</code> without setting explicitly <code>idgen=None</code> would raise a <code>ValueError</code>. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/238">#238</a>.</li>
+<li>Fixed bug where case-holding class marks were not propagated to static methods and class methods. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/246">#246</a> </li>
+<li>Fixed support for multiprocessing <code>Pool</code>. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/242">#242</a></li>
+</ul>
+<h3 id="367-minor-improvements-and-preparing-for-pytest-7">3.6.7 - Minor improvements and preparing for pytest 7<a class="headerlink" href="#367-minor-improvements-and-preparing-for-pytest-7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Improved error message when a case function nested in a class has no <code>self</code> argument and is not static. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/243">#243</a></li>
+<li>Added support for the new Scopes enum in pytest 7. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/241">#241</a></li>
+<li>Fixed <code>__version__</code> in development mode.</li>
+</ul>
+<h3 id="366-layout-change">3.6.6 - Layout change<a class="headerlink" href="#366-layout-change" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Restructured project so that tests are truly independent, to ease rpm/apt/etc. packaging. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/220">#220</a>.</li>
+</ul>
+<h3 id="365-bugfix">3.6.5 - Bugfix<a class="headerlink" href="#365-bugfix" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fixed an issue where using keyword <code>argnames</code> in <code>@pytest.mark.parametrize</code> would cause <code>IndexError: tuple index out of range</code> in the tests collection phase. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/234">#234</a>.</li>
+</ul>
+<h3 id="364-bugfix">3.6.4 - Bugfix<a class="headerlink" href="#364-bugfix" title="Permanent link">&para;</a></h3>
+<ul>
+<li>A case id can now be a reserved keyword without triggering any <code>SyntaxError</code>, even if the case is transformed into a fixture. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/230">#230</a></li>
+</ul>
+<h3 id="363-bugfix">3.6.3 - Bugfix<a class="headerlink" href="#363-bugfix" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fixed an issue where a lazy value would not be resolved. This happens when the "auto-simplify fixture" happens in <code>@parametrize</code>. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/225">#225</a></li>
+</ul>
+<h3 id="362-qualimetry">3.6.2 - Qualimetry<a class="headerlink" href="#362-qualimetry" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fixed most <code>flake8</code> errors and updated documentation to use <code>genbadge</code>. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/223">#223</a></li>
+</ul>
+<h3 id="361-bugfix-parametrizing-a-class-with-parametrize">3.6.1 - bugfix - parametrizing a class with <code>@parametrize</code><a class="headerlink" href="#361-bugfix-parametrizing-a-class-with-parametrize" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fixed <code>ValueError</code> when <code>@parametrize</code> is used to parametrize a class. Also, added a more explicit <code>TypeError</code> when <code>@parametrize</code> is used to parametrize a class and at least a fixture reference is present. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/215">#215</a>.</li>
+</ul>
+<h3 id="360-unpack_fixtures-in-classes-current_cases-improvements">3.6.0 - <code>unpack_fixtures</code> in classes + <code>current_cases</code> improvements<a class="headerlink" href="#360-unpack_fixtures-in-classes-current_cases-improvements" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>The <code>current_cases</code> fixture now contains case parameters if any. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/214">#214</a></p>
+</li>
+<li>
+<p>The <code>current_cases</code> fixture entries are now instances of <code>namedtuple</code>.</p>
+</li>
+<li>
+<p>New <code>in_cls</code> argument in <code>unpack_fixtures</code> so that it can be used inside classes. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/201">#201</a></p>
+</li>
+<li>
+<p>Fixed minor issue where empty entries could be present in <code>currentcases</code>. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/213">#213</a></p>
+</li>
+</ul>
+<h3 id="352-bugfix-with-the-currentcases-fixture">3.5.2 - bugfix with the <code>currentcases</code> fixture<a class="headerlink" href="#352-bugfix-with-the-currentcases-fixture" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fixed issues where the <code>currentcases</code> fixture would not return the correct case function. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/212">#212</a></li>
+</ul>
+<h3 id="351-python-310-compatibility-improved-error-message">3.5.1 - python 3.10 compatibility + improved error message<a class="headerlink" href="#351-python-310-compatibility-improved-error-message" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fixed error message related to misuse of <code>fixture_ref</code>. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/209">#209</a></li>
+<li>Fixed import error with python 3.10. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/207">#207</a></li>
+</ul>
+<h3 id="350-new-current_cases-fixture-and-get_current_cases-function-fixes">3.5.0 - New <code>current_cases</code> fixture and <code>get_current_cases</code> function + Fixes<a class="headerlink" href="#350-new-current_cases-fixture-and-get_current_cases-function-fixes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>New: Users can now easily access the current cases for each parametrized argument thanks to the new <code>current_cases</code> fixture. A new helper function <code>get_current_cases</code> is also provided, for direct access from a hook. <code>get_current_case_id</code> becomes deprecated in favour of these two. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/195">#195</a></p>
+</li>
+<li>
+<p>Bugfix: Fixed issue where the cache of a <code>lazy_value</code> used for a tuple of parameters (several <code>argnames</code>) was not considering the pytest context and thus was wrongly used across pytest nodes. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/202">#202</a></p>
+</li>
+<li>
+<p>Improved error message when a fixture parametrized with several argnames as once is not able to unpack the parameter values received (non subscriptable object).</p>
+</li>
+<li>
+<p><code>parametrize_plus</code> and <code>fixture_plus</code> are now deprecated in favour of <code>parametrize</code> and <code>fixture</code>, as most users seem to have adopted these names without issues.</p>
+</li>
+<li>
+<p>(internal) Replaced the <code>"used"</code> parameter with a dedicated singleton <code>USED</code></p>
+</li>
+</ul>
+<h3 id="346-increased-compatibility-with-other-plugins">3.4.6 - Increased compatibility with other plugins<a class="headerlink" href="#346-increased-compatibility-with-other-plugins" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>LazyValue</code>, <code>LazyTuple</code> and <code>LazyTupleItem</code> are now hashable. This increases compatibility with plugins hashing the parameter values, such as pytest-steps. See <a href="https://github.com/smarie/python-pytest-steps/issues/41">pytest-steps#41</a> . Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/199">#199</a></li>
+</ul>
+<h3 id="345-bugfix">3.4.5 - Bugfix<a class="headerlink" href="#345-bugfix" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fixed bug when a test module containing <code>@parametrize_with_cases</code> was executed outside of <code>pytest</code>, typically through its <code>__main__</code>. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/198">#198</a></li>
+</ul>
+<h3 id="344-bugfix">3.4.4 - Bugfix<a class="headerlink" href="#344-bugfix" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fixed issue when <code>@parametrize_with_cases</code> was used on a fixture in a <code>conftest.py</code>. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/196">#196</a></li>
+</ul>
+<h3 id="343-technical-release-zenodo">3.4.3 - Technical release - Zenodo<a class="headerlink" href="#343-technical-release-zenodo" title="Permanent link">&para;</a></h3>
+<p>Technical release to check that Zenodo metadata is now preserved.
+Same as 3.4.2, 3.4.1 and 3.4.0.</p>
+<h3 id="340-goodbye-v1-api-support-for-unbound-cases-bugfix-with-marks-fixtures-in-case-files">3.4.0 - Goodbye v1 API + Support for unbound cases + Bugfix with marks + Fixtures in case files<a class="headerlink" href="#340-goodbye-v1-api-support-for-unbound-cases-bugfix-with-marks-fixtures-in-case-files" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Legacy v1 API was dropped. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/192">#192</a></p>
+</li>
+<li>
+<p>Unbound case functions in a class (e.g. <code>Foo.bar</code>) can now be directly passed to <code>parametrize_with_cases</code> without instantiating the class, e.g. <code>parametrize_with_cases(cases=Foo.bar)</code>. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/159">#159</a></p>
+</li>
+<li>
+<p>Fixed bug with concatenation of marks on cases. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/191">#191</a></p>
+</li>
+<li>
+<p>Fixed an issue where a case transformed into a fixture, with the same name as the fixture it requires, would lead to a <code>pytest</code> fixture recursion. </p>
+</li>
+<li>
+<p>Fixtures in case files can now be automatically imported using the <strong>experimental</strong> <code>@parametrize_with_cases(import_fixtures=True)</code>. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/193">#193</a></p>
+</li>
+</ul>
+<h3 id="330-filter-helpers-current-id-getter-support-for-pytest-asyncio-and-other-plugins">3.3.0 - Filter helpers, Current id getter, Support for <code>pytest-asyncio</code> and other plugins<a class="headerlink" href="#330-filter-helpers-current-id-getter-support-for-pytest-asyncio-and-other-plugins" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Migrated to Github Actions + <code>nox</code> for CI/CD.</p>
+</li>
+<li>
+<p>New helper function <code>get_current_case_id</code> to get the current case id for a given <code>pytest</code> request or item. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/189">#189</a></p>
+</li>
+<li>
+<p>Extended the support of fixture closure modifications to <code>remove</code> and <code>insert(0, f)</code>. This in particular solves an issue with <code>pytest-asyncio</code>. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/176">#176</a></p>
+</li>
+<li>
+<p>New <code>filters</code> module providing helper functions <code>has_tag</code>, <code>id_has_prefix</code>, <code>id_has_suffix</code>, <code>id_match_regex</code> to easily create custom filters for use in <code>@parametrize_with_cases(filter=...)</code>. PR <a href="https://github.com/smarie/python-pytest-cases/pull/184">#184</a> by <a href="https://github.com/saroad2">@saroad2</a>, (thanks !).</p>
+</li>
+</ul>
+<h3 id="321-fixture-bugfix">3.2.1 - <code>@fixture</code> Bugfix<a class="headerlink" href="#321-fixture-bugfix" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fixed <code>fixture 'self' not found</code> issue when <code>@fixture</code> was used to decorate a class method not explicitly depending on <code>request</code>. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/182">#182</a></li>
+</ul>
+<h3 id="320-automatic-fixture_ref-test-ordering-bugfix">3.2.0 - Automatic <code>fixture_ref</code> + test ordering bugfix<a class="headerlink" href="#320-automatic-fixture_ref-test-ordering-bugfix" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>New: from version <code>3.2</code> on, if <code>auto_refs=True</code> (default), <code>@parametrize</code> will automatically detect fixture symbols in the list of argvalues, and will create <code>fixture_ref</code>s automatically around them so that you don't need to. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/177">#177</a></p>
+</li>
+<li>
+<p>Fixed ordering issue happening on linux targets when several <code>@parametrize</code> are used to decorate the same function. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/180">#180</a></p>
+</li>
+</ul>
+<h3 id="312-bugfixes-with-nesting-and-pytest-asyncio">3.1.2 - Bugfixes with nesting and pytest-asyncio<a class="headerlink" href="#312-bugfixes-with-nesting-and-pytest-asyncio" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Now appending fixtures to the closure once it has been built is supported. This fixes an issue with <code>pytest-asyncio</code>. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/176">#176</a></p>
+</li>
+<li>
+<p>Fixed issue when <code>parametrize_with_cases</code> was used on case functions themselves (nesting/recursion). This was due to a lack of support of the <code>place_as</code> magic pytest attribute. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/179">#179</a></p>
+</li>
+<li>
+<p>Added a warning concerning usage of indirect in parametrize when fixture references are present. See <a href="https://github.com/smarie/python-pytest-cases/issues/150">#150</a></p>
+</li>
+</ul>
+<h3 id="311-bugfix-with-ids">3.1.1 - Bugfix with ids<a class="headerlink" href="#311-bugfix-with-ids" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fixed issue with Empty id marker leaking to test ids. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/171">#171</a></li>
+</ul>
+<h3 id="310-improved-cases-collection">3.1.0 - Improved cases collection<a class="headerlink" href="#310-improved-cases-collection" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><code>@parametrize_with_cases</code> now by default (<code>cases=AUTO</code>) looks for both file naming patterns <code>test_&lt;name&gt;_cases.py</code> and <code>cases_&lt;name&gt;.py</code>. Removed the <code>AUTO2</code> constant. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/140">#140</a></p>
+</li>
+<li>
+<p>Nested classes containing case functions are now officially supported (they were, but undocumented). Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/160">#160</a></p>
+</li>
+<li>
+<p>Case functions that are <code>staticmethod</code> and <code>classmethod</code> are now supported as well. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/168">#168</a></p>
+</li>
+</ul>
+<h3 id="300-harmonization-of-ids-and-public-api-for-cases-info">3.0.0 - harmonization of ids and public API for cases info<a class="headerlink" href="#300-harmonization-of-ids-and-public-api-for-cases-info" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Major refactoring of the way ids and marks are generated and customized in <code>fixture_union</code>, <code>@parametrize</code> and <code>@parametrize_with_cases</code>. Now <code>idstyle</code> has a consistent behaviour across the board, <code>ids</code> and <code>idstyle</code> can work together correctly, <code>@parametrize_with_cases</code> and <code>@parametrize</code> have much better default values for ids, and many others. See <a href="../">documentation</a> for details. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/154">#154</a></p>
+</li>
+<li>
+<p>New public API to manipulate information about a case function: <code>copy_case_info</code>, <code>set_case_id</code>, <code>get_case_id</code>, <code>get_case_marks</code>, <code>get_case_tags</code>, <code>matches_tag_query</code>, <code>is_case_class</code>, <code>is_case_function</code>. See <a href="../api_reference/">API reference</a>.</p>
+</li>
+<li>
+<p>Fixed default behaviour of <code>idgen</code> in <code>@parametrize</code>: it only defaults to <code>AUTO</code> when no <code>fixture_ref</code> are used in the argvalues.</p>
+</li>
+</ul>
+<h3 id="272-bugfix-with-doctest">2.7.2 - Bugfix with doctest<a class="headerlink" href="#272-bugfix-with-doctest" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fixed <code>AttributeError: 'DoctestItem' object has no attribute '_request'</code> when executing doctests. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/156">#156</a></li>
+</ul>
+<h3 id="271-pytestmarkusefixtures-can-be-used-on-case-functions">2.7.1 - <code>@pytest.mark.usefixtures</code> can be used on case functions<a class="headerlink" href="#271-pytestmarkusefixtures-can-be-used-on-case-functions" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>@pytest.mark.usefixtures</code> can be now be used on case functions. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/152">#152</a>.</li>
+</ul>
+<h3 id="270-parametrize_with_cases-now-supports-id-customization">2.7.0 - <code>@parametrize_with_cases</code> now supports id customization<a class="headerlink" href="#270-parametrize_with_cases-now-supports-id-customization" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>@parametrize_with_cases</code> now explicitly supports all id customization methods (<code>ids</code>, <code>idgen</code> and <code>idstyle</code>) supported by <code>@parametrize</code> (<code>ids</code>, <code>idgen</code> and <code>idstyle</code>). Updated documentation accordingly. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/151">#151</a></li>
+</ul>
+<h3 id="260-better-cache-for-lazy-values-and-support-for-infinite-id-generators">2.6.0 - better cache for lazy values and support for infinite id generators<a class="headerlink" href="#260-better-cache-for-lazy-values-and-support-for-infinite-id-generators" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><code>lazy_value</code> parameters are now cached by pytest node id only. So plugins can access the value without triggering an extra function call, but a new call is triggered for each pytest node, so as to prevent mutable object leakage across tests. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/149">#149</a> while ensuring no regression for <a href="https://github.com/smarie/python-pytest-cases/issues/143">#143</a>.</p>
+</li>
+<li>
+<p>The <code>ids</code> argument of <code>parametrize</code> now accepts a (possibly infinite) generator of ids, e.g. (<code>f"foo{i}" for i in itertools.count()</code>), just as <code>pytest</code> does. This was not always the case, inparticular when parametrizing a <code>@fixture</code>. The <code>ids</code> arguments of <code>fixture_union</code>, <code>param_fixture[s]</code>, etc. now also support this pattern. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/148">#148</a></p>
+</li>
+</ul>
+<h3 id="250-case-ids-glob-match-improvements">2.5.0 - case ids <code>glob</code> match improvements<a class="headerlink" href="#250-case-ids-glob-match-improvements" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Improved description for the <code>glob</code> argument in <code>@parametrize_with_cases</code>. Also made the implementation escape all regex special characters so that they can't be used. Finally a pattern should now match the entire case id (previously, a partial match would work if it was at the beginning of the string). One step towards <a href="https://github.com/smarie/python-pytest-cases/issues/147">#147</a></li>
+</ul>
+<h3 id="240-various-fixes-for-test-ids-and-lazy-values">2.4.0 - various fixes for test ids and lazy values<a class="headerlink" href="#240-various-fixes-for-test-ids-and-lazy-values" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><code>is_lazy</code> is now part of public API, and <code>_LazyValue</code> now has a cache mechanism like <code>_LazyTuple</code>. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/143">#143</a></p>
+</li>
+<li>
+<p><code>@parametrize</code>: custom <code>ids</code> are now correctly taken into account when a single <code>lazy_value</code>is used for a tuple of parameters. This issue could be seen also with <code>@parametrize_with_cases</code>: <code>idgen</code> does not seem to be taken into account when cases are unpacked into a tuple. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/144">#144</a>.</p>
+</li>
+<li>
+<p>Empty case ids are now replaced with <code>'&lt;empty_case_id&gt;'</code> to avoid ambiguous interpretation of test ids. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/142">#142</a>.</p>
+</li>
+</ul>
+<h3 id="230-better-lazyvalue-internal-api">2.3.0 - better <code>LazyValue</code> internal API<a class="headerlink" href="#230-better-lazyvalue-internal-api" title="Permanent link">&para;</a></h3>
+<ul>
+<li>new <code>clone(self, remove_int_base=False)</code> API on <code>LazyValue</code> and <code>LazyTupleItem</code> instances. With this new API, on old <code>pytest</code> <code>&lt; 5.3</code>, other plugins such as <code>pytest-harvest</code> can easily clone the contents from lazy values without having them inherit from <code>int</code> - which was a dirty hack used by <code>pytest-cases</code> to trick <code>pytest</code> to generate acceptable test ids in these old pytest versions. Also improved the <code>LazyValue</code>, <code>LazyTuple</code> and <code>LazyTupleItem</code> object model with equality and repr. Fixes <a href="https://github.com/smarie/python-pytest-harvest/issues/43">pytest-harvest#43</a></li>
+</ul>
+<h3 id="225-marks-are-now-correctly-propagated-from-case-class">2.2.5 - Marks are now correctly propagated from Case class<a class="headerlink" href="#225-marks-are-now-correctly-propagated-from-case-class" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Marks set on a case class are now propagated to cases in the class. So you can use for example <a href="https://smarie.github.io/python-pytest-pilot/"><code>pytest-pilot</code></a> more easily ! Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/139">#139</a></li>
+</ul>
+<h3 id="224-fixes-issue">2.2.4 - Fixes issue<a class="headerlink" href="#224-fixes-issue" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fixed "Created fixture names are not unique, please report" error when duplicate fixture reference is provided in a pytest.param. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/138">#138</a>.</li>
+</ul>
+<h3 id="223-fixed-issue-with-pytest-3x">2.2.3 - Fixed issue with pytest <code>3.X</code><a class="headerlink" href="#223-fixed-issue-with-pytest-3x" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fixed <code>TypeError: _idval() got an unexpected keyword argument 'item'</code> with <code>pytest</code> versions between 3.0.0 and 3.7.4. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/136">#136</a></li>
+</ul>
+<h3 id="222-parametrize_with_cases-compatibility-improvements">2.2.2 - <code>@parametrize_with_cases</code> compatibility improvements<a class="headerlink" href="#222-parametrize_with_cases-compatibility-improvements" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>@parametrize_with_cases</code> now supports that <code>argnames</code> is a list or tuple, just as <code>@pytest.mark.parametrize</code> does. PR <a href="https://github.com/smarie/python-pytest-cases/pull/132">#132</a>, by <a href="https://github.com/saroad2"><code>@saroad2</code></a>.</li>
+</ul>
+<h3 id="221-setuppy-fix-to-enforce-dependency-version">2.2.1 - setup.py fix to enforce dependency version<a class="headerlink" href="#221-setuppy-fix-to-enforce-dependency-version" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Now enforcing usage of <code>makefun</code> 1.9.3 or above to avoid issue <code>AttributeError: 'functools.partial' object has no attribute '__module__'</code> mentioned in <a href="https://github.com/smarie/python-pytest-cases/issues/128">#128</a></li>
+</ul>
+<h3 id="220-doc-improvements-bugfix-for-cases-requiring-fixtures">2.2.0 - Doc improvements + bugfix for cases requiring fixtures<a class="headerlink" href="#220-doc-improvements-bugfix-for-cases-requiring-fixtures" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Improved documentation to explain why <code>@fixture</code> should be used instead of <code>@pytest.fixture</code>. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/125">#125</a></p>
+</li>
+<li>
+<p>Fixed <code>ValueError: fixture is being applied more than once to the same function</code> when two functions parametrized with the same cases were sitting in the same file. Improved robustness when cases require fixtures, in particular when parametrized test/fixture sits in a class or when several of them sit in a class/module. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/126">#126</a></p>
+</li>
+</ul>
+<h3 id="213-missing-deprecation-warning">2.1.3 - Missing deprecation warning<a class="headerlink" href="#213-missing-deprecation-warning" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Added missing deprecation warning on <code>@cases_generator</code>. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/124">#124</a>.</p>
+</li>
+<li>
+<p>Removed <code>target</code> and <code>tags</code> arguments of <code>@cases_generator</code> (deprecated api anyway) that were added by mistake in version 2.0.0 but never used.</p>
+</li>
+</ul>
+<h3 id="212-compatibility-fix">2.1.2 - Compatibility fix<a class="headerlink" href="#212-compatibility-fix" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Added support for pytest items without funcargs. Fixes interoperability with other pytest plugins such as <code>pytest-black</code> or <code>pytest-flake8</code>. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/122">#122</a></li>
+</ul>
+<h3 id="211-fixed-issue-with-pytest-6">2.1.1 - Fixed issue with pytest 6<a class="headerlink" href="#211-fixed-issue-with-pytest-6" title="Permanent link">&para;</a></h3>
+<p><code>pytest</code> 6 is now supported. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/121">#121</a> </p>
+<h3 id="210-internal-engine-improvements-bugfixes">2.1.0 - Internal engine improvements + bugfixes<a class="headerlink" href="#210-internal-engine-improvements-bugfixes" title="Permanent link">&para;</a></h3>
+<p>Fixed issue with <code>@parametrize_with_cases</code> when two cases with the same id and both requiring a fixture were to be created. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/117">#117</a>.</p>
+<p>Fixture closure engine refactoring:</p>
+<ul>
+<li>
+<p>When no fixture unions are present, the fixture closure is now identical to the default one in <code>pytest</code>, to avoid issues originating from other plugins fiddling with the closure. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/116">#116</a></p>
+</li>
+<li>
+<p>New <code>SuperClosure</code> class representing the "list" facade on top of the fixture tree (instead of <code>FixtureClosureNode</code>). In addition, this list facade now better handles editing the order of fixtures when possible. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/111">#111</a>.</p>
+</li>
+<li>
+<p>Session and Module-scoped fixtures that are not used in all union alternatives are not any more torn town/setup across union alternatives. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/120">#120</a></p>
+</li>
+</ul>
+<h3 id="204-bugfix">2.0.4 - Bugfix<a class="headerlink" href="#204-bugfix" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fixed <code>TypeError</code> with iterable argvalue in standard parametrize. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/115">#115</a>.</li>
+</ul>
+<h3 id="203-bugfixes">2.0.3 - Bugfixes<a class="headerlink" href="#203-bugfixes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Fixed wrong module string decomposition when passed to <code>cases</code> argument in <code>@parametrize_with_cases</code>. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/113">#113</a></p>
+</li>
+<li>
+<p>Autouse fixtures are now correctly used. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/114">#114</a></p>
+</li>
+</ul>
+<h3 id="202-better-string-representation-for-lazy-values">2.0.2 - Better string representation for lazy values<a class="headerlink" href="#202-better-string-representation-for-lazy-values" title="Permanent link">&para;</a></h3>
+<p>Lazy values (so, test cases) now have a much nicer string representation ; in particular in <code>pytest-harvest</code> results tables. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/112">#112</a></p>
+<h3 id="201-better-test-ids-and-theory-page">2.0.1 - Better test ids and theory page<a class="headerlink" href="#201-better-test-ids-and-theory-page" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>New documentation page concerning theory of fixture unions. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/109">#109</a></p>
+</li>
+<li>
+<p>Using a <code>fixture_ref</code> in a new-style <code>@parametrize</code> (with <code>**args</code> or <code>idgen</code>) now outputs a correct id. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/110">#110</a></p>
+</li>
+</ul>
+<h3 id="200-less-boilerplate-full-pytest-alignment">2.0.0 - Less boilerplate &amp; full <code>pytest</code> alignment<a class="headerlink" href="#200-less-boilerplate-full-pytest-alignment" title="Permanent link">&para;</a></h3>
+<p>I am very pleased to announce this new version of <code>pytest-cases</code>, providing a lot of <strong>major</strong> improvements. Creating powerful and complex test suites have never been so easy and intuitive !</p>
+<p>Below is a complete list of changes, but the user guide has also been updated accordingly so feel free to <a href="../">have a look</a> to get a complete example-based walkthrough.</p>
+<p><strong>A/ More powerful and flexible cases collection</strong></p>
+<p>New <a href="../api_reference/#parametrize_with_cases"><code>@parametrize_with_cases</code></a> decorator to replace <code>@cases_data</code> (deprecated).</p>
+<ol>
+<li>
+<p>Aligned with <code>pytest</code>: </p>
+<ul>
+<li>
+<p>now <code>argnames</code> can contain several names, and the case functions are <strong>automatically unpacked</strong> into it. You don't need to perform a <code>case.get()</code> in the test anymore !</p>
+<div class="highlight"><pre><span></span><code>@parametrize_with_cases(&quot;a,b&quot;)
+def test_foo(a, b):
+    # use a and b directly !
+    ...
+</code></pre></div>
+</li>
+<li>
+<p>cases are unpacked at test <em>setup</em> time, so <em>the clock does not run while the case is created</em> - in case you use <code>pytest-harvest</code> to collect the timings.</p>
+</li>
+<li>
+<p><code>@parametrize_with_cases</code> can be used on test functions <em>as well as fixture functions</em> (it was already the case in v1)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Easier to configure: </p>
+<ul>
+<li>
+<p>the decorator now has a single <code>cases</code> argument to indicate the cases, wherever they come from (no <code>module</code> argument anymore)</p>
+</li>
+<li>
+<p>default (<code>cases=AUTO</code>) <em>automatically looks for cases in the associated case module</em> named <code>test_xxx_cases.py</code>. Users can easily switch to alternate pattern <code>cases_xxx.py</code> with <code>cases=AUTO2</code>. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/91">#91</a>.</p>
+</li>
+<li>
+<p><strong>cases can sit inside a class</strong>, like <a href="https://docs.pytest.org/en/stable/getting-started.html#group-multiple-tests-in-a-class">what you're used to do with <code>pytest</code></a>. This additional style makes it much more convenient to organize cases and associated them with tests, when cases sit in the same file than the tests. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/93">#93</a>.</p>
+</li>
+<li>
+<p>an explicit sequence can be provided, <em>it can mix all kind of sources</em>: functions, classes, modules, and <em>module names as strings</em> (even relative ones!).</p>
+<div class="highlight"><pre><span></span><code>@parametrize_with_cases(&quot;a&quot;, cases=(CasesClass, &#39;.my_extra_cases&#39;))
+def test_foo(a):
+    ...
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>More powerful API for filtering:</p>
+<ul>
+<li>
+<p>a new <code>prefix</code> argument (default <code>case_</code>) can be used to define case functions for various type of parameters: welcome <code>user_&lt;id&gt;</code>, <code>data_&lt;id&gt;</code>, <code>algo_&lt;id&gt;</code>, <code>model_&lt;id&gt;</code> ! Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/108">#108</a></p>
+</li>
+<li>
+<p>a new <code>glob</code> argument receiving a glob-like string can be used to further filter cases based on their names. For example you can distinguish <code>*_success</code> from <code>*_failure</code> case ids, so as to dispatch them to the appropriate positive or negative test. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/108">#108</a></p>
+</li>
+<li>
+<p>finally you can still use <code>has_tag</code> and/or provide a <code>filter</code> callable, but now the callable will receive the case function, and this case function has a <code>f._pytestcase</code> attribute containing the id, tags and marks - it is therefore much easier to implement custom filtering.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>B/ Easier-to-define case functions</strong></p>
+<ul>
+<li>
+<p>Case functions can start with different prefixes to denote different kind of data: e.g. <code>data_&lt;id&gt;</code>, <code>user_&lt;id&gt;</code>, <code>model_&lt;id&gt;</code>, etc.</p>
+</li>
+<li>
+<p>Case functions can now be parametrized with <a href="../pytest_goodies/#parametrize"><code>@parametrize</code></a> or <code>@pytest.mark.parametrize</code>, just as in pytest ! This includes the ability to put <a href="https://docs.pytest.org/en/stable/mark.html"><code>pytest</code> marks</a> on the whole case, or on some specific parameter values using <a href="https://docs.pytest.org/en/stable/example/parametrize.html#set-marks-or-test-id-for-individual-parametrized-test"><code>pytest.param</code></a>. <code>@cases_generator</code> is therefore now deprecated but its alternate style for ids and arguments definition was preserved in <code>@parametrize</code>, see below. </p>
+</li>
+<li>
+<p>Now case functions can require fixtures ! In that case they will be transformed into fixtures and injected as <code>fixture_ref</code> in the parametrization. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/56">#56</a>.</p>
+</li>
+<li>
+<p>New single optional <code>@case(id=None, tags=(), marks=())</code> decorator to replace <code>@case_name</code> and <code>@case_tags</code> (deprecated): a single simple way to customize all aspects of a case function. Also, <code>@test_target</code> completely disappears from the picture as it was just a tag like others - this could be misleading.</p>
+</li>
+</ul>
+<p><strong>C/ Misc / pytest goodies</strong></p>
+<ul>
+<li>
+<p>New aliases for readability: <code>@fixture</code> for <code>@fixture_plus</code>, and<code>@parametrize</code> for <code>@parametrize_plus</code> (both aliases will coexist with the old names). Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/107">#107</a>.</p>
+</li>
+<li>
+<p><code>@parametrize</code> was improved in order to support the alternate parametrization mode that was previously offered by <code>@cases_generator</code>, see <a href="../api_reference/#parametrize">api reference</a>. That way, users will be able to choose the style of their choice. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/57">#57</a> and <a href="https://github.com/smarie/python-pytest-cases/issues/106">#106</a>.</p>
+</li>
+<li>
+<p><code>@parametrize</code> now raises an explicit error message when the user makes a mistake with the argnames. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/105">#105</a>.</p>
+</li>
+<li>
+<p>More readable error messages in <code>@parametrize</code> when <code>lazy_value</code> does not return the same number of argvalues than expected from the argnames.</p>
+</li>
+<li>
+<p>Any error message associated to a <code>lazy_value</code> function call is not caught and hidden anymore but is emitted to the user, for easier debugging.</p>
+</li>
+<li>
+<p>Fixed issue with <code>lazy_value</code> when a single mark is passed in the constructor.</p>
+</li>
+<li>
+<p><code>lazy_value</code> used as a tuple for several arguments now have a correct id generated even in old pytest version 2.</p>
+</li>
+<li>
+<p>New pytest goodie <code>assert_exception</code> that can be used as a context manager. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/104">#104</a>.</p>
+</li>
+</ul>
+<h3 id="1170-lazy_value-improvements-annoying-warnings-suppression">1.17.0 - <code>lazy_value</code> improvements + annoying warnings suppression<a class="headerlink" href="#1170-lazy_value-improvements-annoying-warnings-suppression" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><code>lazy_value</code> are now resolved at pytest <code>setup</code> stage, not pytest <code>call</code> stage. This is important for execution time recorded in the reports (see also <code>pytest-harvest</code> plugin). Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/102">#102</a> </p>
+</li>
+<li>
+<p>A function used as a <code>lazy_value</code> can now be marked with pytest marks. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/99">#99</a></p>
+</li>
+<li>
+<p>A <code>lazy_value</code> now has a nicer id when it is a partial. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/97">#97</a></p>
+</li>
+<li>
+<p>Removed annoying <code>PytestUnknownMarkWarning</code> warning message when a mark was used on a case. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/100">#100</a></p>
+</li>
+</ul>
+<h3 id="1160-new-lazy_value-for-parameters">1.16.0 - New <code>lazy_value</code> for parameters<a class="headerlink" href="#1160-new-lazy_value-for-parameters" title="Permanent link">&para;</a></h3>
+<ul>
+<li>New marker <code>lazy_value</code> for <code>parametrize_plus</code>. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/92">#92</a></li>
+</ul>
+<h3 id="1150-better-parametrize_plus-and-smaller-dependencies">1.15.0 - better <code>parametrize_plus</code> and smaller dependencies<a class="headerlink" href="#1150-better-parametrize_plus-and-smaller-dependencies" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Better support for <code>pytest.param</code> in <code>parametrize_plus</code> and also in <code>fixture_union</code> and <code>fixture_param[s]</code>. Improved corresponding ids. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/79">#79</a> and <a href="https://github.com/smarie/python-pytest-cases/issues/86">#86</a></p>
+</li>
+<li>
+<p>New <code>@ignore_unused</code> decorator to protect a fixture function from the "NOT_USED" case happening when the fixture is used in a fixture union.</p>
+</li>
+<li>
+<p>Removed <code>six</code>, <code>wrapt</code> and <code>enum34</code> dependencies</p>
+</li>
+<li>
+<p>(Internal) submodules reorganization for readability</p>
+</li>
+<li>(Internal) suppressed a lot of code quality warnings</li>
+</ul>
+<h3 id="1140-bugfixes-and-hook-feature">1.14.0 - bugfixes and hook feature<a class="headerlink" href="#1140-bugfixes-and-hook-feature" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Fixed <code>ids</code> precedence order when using <code>pytest.mark.parametrize</code> in a <code>fixture_plus</code>. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/87">#87</a></p>
+</li>
+<li>
+<p>Fixed issue with <code>fixture_union</code> when using the same fixture twice in it. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/85">#85</a></p>
+</li>
+<li>
+<p>Added the possibility to pass a <code>hook</code> function in all API where fixtures are created behind the scenes, so as to ease debugging and/or save fixtures (with <code>stored_fixture</code> from pytest harvest). Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/83">#83</a></p>
+</li>
+<li>
+<p>Fixture closures now support reordering when no unions are present. This suppressed the annoying warning "WARNING the new order is not taken into account !!" when it was not relevant. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/81">#81</a></p>
+</li>
+</ul>
+<h3 id="1131-packaging-improvements">1.13.1 - packaging improvements<a class="headerlink" href="#1131-packaging-improvements" title="Permanent link">&para;</a></h3>
+<ul>
+<li>packaging improvements: set the "universal wheel" flag to 1, and cleaned up the <code>setup.py</code>. In particular removed dependency to <code>six</code> for setup and added <code>py.typed</code> file. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/78">#78</a></li>
+</ul>
+<h3 id="1130-cases_generator-default-names">1.13.0 - <code>@cases_generator</code> default <code>names</code><a class="headerlink" href="#1130-cases_generator-default-names" title="Permanent link">&para;</a></h3>
+<p><code>@cases_generator</code> now has a default value for the <code>names</code> template, based on the parameters. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/77">#77</a>.</p>
+<h3 id="1124-bugfix">1.12.4 - Bugfix<a class="headerlink" href="#1124-bugfix" title="Permanent link">&para;</a></h3>
+<p>Fixed <code>ValueError</code> when a product of unions was used on a test node, for example when two <code>parametrize_plus</code> using <code>fixture_ref</code>s were used on the same fixture or test function. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/76">#76</a></p>
+<h3 id="1123-improved-error-messages">1.12.3 - Improved error messages<a class="headerlink" href="#1123-improved-error-messages" title="Permanent link">&para;</a></h3>
+<p>Improved error message when something that is not a fixture is used in <code>unpack_fixture</code> or <code>fixture_union</code>. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/75">#75</a></p>
+<h3 id="1122-warning-fix">1.12.2 - Warning fix<a class="headerlink" href="#1122-warning-fix" title="Permanent link">&para;</a></h3>
+<p>Fixed deprecation warning <a href="https://github.com/smarie/python-pytest-cases/issues/74">#74</a></p>
+<h3 id="1121-bugfixes">1.12.1 - Bugfixes<a class="headerlink" href="#1121-bugfixes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Now using module name and not file path to detect symbols in cases files that are imported from elsewhere and not created locally. Indeed that was causing problems on some ^platforms where a <code>.pyc</code> cache file is created. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/72">#72</a></p>
+</li>
+<li>
+<p>Fixed <code>PluginValidationError</code> when <code>pytest_fixture_plus</code> or <code>pytest_parametrize_plus</code> were used in a <code>conftest.py</code> file. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/71">#71</a>. According to discussion in <a href="https://github.com/pytest-dev/pytest/issues/6475">pytest#6475</a>, <code>pytest_fixture_plus</code> and <code>pytest_parametrize_plus</code> are now renamed to <code>fixture_plus</code> and <code>parametrize_plus</code> in order for pytest (pluggy) not to think they are hooks. Old aliases will stay around for a few versions, with a deprecation warning.</p>
+</li>
+</ul>
+<h3 id="1120-better-test-ids-for-parametrized-tests-with-fixture-refs-bugfix">1.12.0 - better test ids for parametrized tests with fixture refs + bugfix<a class="headerlink" href="#1120-better-test-ids-for-parametrized-tests-with-fixture-refs-bugfix" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Improved test ids for the cases where <code>fixture_ref</code> is used in the parameters list in <code>@pytest_parametrize_plus</code>. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/69">#69</a>. Thanks <a href="https://github.com/last-partizan"><code>last-partizan</code></a> for the suggestion !</p>
+</li>
+<li>
+<p>Fixed <code>TypeError: got an unexpected keyword argument 'indirect'</code> with <code>pytest</code> 5+. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/70">#70</a>.</p>
+</li>
+</ul>
+<h3 id="1119-bugfix">1.11.9 - bugfix<a class="headerlink" href="#1119-bugfix" title="Permanent link">&para;</a></h3>
+<p><code>FixtureClosureNode</code> is now able to properly handle <code>ignore_args</code>, and now supports that plugins append fixtures to the closure, such as pytest-asyncio. Added corresponding tests. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/68">#68</a></p>
+<h3 id="1118-bugfix">1.11.8 - bugfix<a class="headerlink" href="#1118-bugfix" title="Permanent link">&para;</a></h3>
+<p>Fixed <code>KeyError</code> issue happening when a fixture is not found. Now users will see the "normal" error message from pytest (<code>"fixture &lt;name&gt; not found"</code>). Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/67">#67</a>.</p>
+<h3 id="1117-bugfix">1.11.7 - bugfix<a class="headerlink" href="#1117-bugfix" title="Permanent link">&para;</a></h3>
+<p>Fixed <code>ValueError</code> issue happening with indirectly parametrized fixtures. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/64">#64</a>.</p>
+<h3 id="1116-pyprojecttoml">1.11.6 - pyproject.toml<a class="headerlink" href="#1116-pyprojecttoml" title="Permanent link">&para;</a></h3>
+<p><a href="https://github.com/raddessi">raddessi</a> added a <code>pyproject.toml</code> - thanks! Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/65">#65</a>.</p>
+<h3 id="1115-bugfix">1.11.5 - bugfix<a class="headerlink" href="#1115-bugfix" title="Permanent link">&para;</a></h3>
+<p><code>pytest_parametrize_plus</code> was not working correctly with test classes, leading to <code>fixture 'self' not found</code>. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/63">#63</a>.</p>
+<h3 id="1114-python-2-bugfix">1.11.4 - python 2 bugfix<a class="headerlink" href="#1114-python-2-bugfix" title="Permanent link">&para;</a></h3>
+<p>Fixed issue happening with <code>@pytest.mark.parametrize</code> with python 2. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/62">#62</a>.</p>
+<h3 id="1113-minor-improvements">1.11.3 - minor improvements<a class="headerlink" href="#1113-minor-improvements" title="Permanent link">&para;</a></h3>
+<p>Better error message when users use <code>THIS_MODULE</code> in <code>cases=</code> instead of <code>module=</code>.</p>
+<p>Added <code>__version__</code> package-level attribute.</p>
+<h3 id="1112-increased-tolerance-to-other-plugins-bugfix">1.11.2 - Increased tolerance to other plugins + bugfix<a class="headerlink" href="#1112-increased-tolerance-to-other-plugins-bugfix" title="Permanent link">&para;</a></h3>
+<p>Now when other plugins try to manipulate the fixture closure, warning messages are emitted but no error is raised. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/55">#55</a>.</p>
+<p>Also fixed issue <a href="https://github.com/smarie/python-pytest-cases/issues/58">#58</a> happening with doctest.</p>
+<h3 id="1111-added-six-dependency-explicitly">1.11.1 - Added <code>six</code> dependency explicitly<a class="headerlink" href="#1111-added-six-dependency-explicitly" title="Permanent link">&para;</a></h3>
+<p>It was missing from <code>setup.py</code>.</p>
+<h3 id="1110-fixture_ref-can-now-be-used-inside-tuples-leading-to-cross-products">1.11.0 - <code>fixture_ref</code> can now be used inside tuples, leading to cross-products<a class="headerlink" href="#1110-fixture_ref-can-now-be-used-inside-tuples-leading-to-cross-products" title="Permanent link">&para;</a></h3>
+<p>Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/47">#47</a>.</p>
+<h3 id="1102-more-intuitive-error-messages">1.10.2 - More intuitive error messages<a class="headerlink" href="#1102-more-intuitive-error-messages" title="Permanent link">&para;</a></h3>
+<p>Now raising an explicit <code>InvalidParamsList</code> when pytest parametrize <code>argvalues</code> are incorrect. See <a href="https://github.com/smarie/python-pytest-cases/issues/54">#54</a></p>
+<h3 id="1101-bugfix">1.10.1 - Bugfix<a class="headerlink" href="#1101-bugfix" title="Permanent link">&para;</a></h3>
+<p>Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/52">#52</a>.</p>
+<h3 id="1100-new-feature-fixtures-unpacking">1.10.0 - New feature: fixtures unpacking<a class="headerlink" href="#1100-new-feature-fixtures-unpacking" title="Permanent link">&para;</a></h3>
+<p>You can now unpack a fixture iterable into several individual fixtures using <code>unpack_fixture</code> or using <code>@pytest_fixture_plus(unpack_into=&lt;names&gt;)</code>. This is also available in <code>union_fixture(unpack_into=&lt;names&gt;)</code>. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/50">#50</a> and <a href="https://github.com/smarie/python-pytest-cases/issues/51">#51</a>.</p>
+<h3 id="193-bugfix">1.9.3 - Bugfix<a class="headerlink" href="#193-bugfix" title="Permanent link">&para;</a></h3>
+<p>Fixed issues when parametrize argnames contains a list. This fixed <a href="https://github.com/smarie/python-pytest-cases/issues/49">#49</a></p>
+<h3 id="192-bugfix-with-pytest-37">1.9.2 - Bugfix with pytest 3.7<a class="headerlink" href="#192-bugfix-with-pytest-37" title="Permanent link">&para;</a></h3>
+<p>Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/48">#48</a>.</p>
+<h3 id="191-bugfix-with-pytest-37">1.9.1 - Bugfix with pytest 3.7<a class="headerlink" href="#191-bugfix-with-pytest-37" title="Permanent link">&para;</a></h3>
+<p>Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/48">#48</a>.</p>
+<h3 id="190-new-with-reorder-commandline-option">1.9.0 - New <code>--with-reorder</code> commandline option<a class="headerlink" href="#190-new-with-reorder-commandline-option" title="Permanent link">&para;</a></h3>
+<p>New commandline option '--with-reorder' to change the reordering strategy currently in application. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/45">#45</a>.</p>
+<p>The <code>--with-reorder</code> "skip" mode was not working correctly in presence of marks, fixed it. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/46">#46</a>.</p>
+<h3 id="181-bugfixes">1.8.1 - BugFixes<a class="headerlink" href="#181-bugfixes" title="Permanent link">&para;</a></h3>
+<p>Ids should not be used when setting a NOT_USED parametrization. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/43">#43</a></p>
+<p>Fixed issue with ordering and setup/teardown for higher-level scope fixtures (session and module scopes) when using union fixtures. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/44">#44</a></p>
+<h3 id="180-better-ids-for-fixture-unions">1.8.0 - Better ids for fixture unions<a class="headerlink" href="#180-better-ids-for-fixture-unions" title="Permanent link">&para;</a></h3>
+<p>New:</p>
+<ul>
+<li><code>fixture_union</code> now accept a non-<code>None</code> value for <code>ids</code>. It also has a new <code>idstyle</code> argument allowing users to change the style of ids used. Finally <code>pytest_parametrize_plus</code> relies on this <code>ids</code> argument to set a more readable list of ids for the created union. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/41">#41</a>.</li>
+</ul>
+<p>Misc:</p>
+<ul>
+<li>Added non-regression test for fixture order. It passes already for all recent pytest versions (after 3.3). Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/42">#42</a></li>
+</ul>
+<h3 id="170-new-pytest_parametrize_plus-allowing-fixture-references-to-be-used-in-parameter-values">1.7.0 - New <code>@pytest_parametrize_plus</code> allowing fixture references to be used in parameter values<a class="headerlink" href="#170-new-pytest_parametrize_plus-allowing-fixture-references-to-be-used-in-parameter-values" title="Permanent link">&para;</a></h3>
+<p>New decorator <code>@pytest_parametrize_plus</code> able to handle the case where a <code>fixture_ref(&lt;fixture_name&gt;)</code> is present in the parameter values list. This decorator can be applied both on test functions and fixtures (if they are decorated with <code>@pytest_fixture_plus</code>). Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/40">#40</a></p>
+<p>Major refactoring of the "union fixtures" mechanism.</p>
+<ul>
+<li>The <code>NOT_USED</code> status is now correctly propagated between dependent fixtures. This should fix a few cases where user fixtures were setup/teardown while not used in the current test node.</li>
+<li>Empty fixture unions are not permitted anymore.</li>
+<li>The way unions are handled in test parametrization was redesigned. The new design is based on a two-steps approach: first build the fixture closure for each node as a tree (and not a list as in <code>pytest</code>), and then apply parametrization intelligently based on this tree structure. This fixes several unintuitive behaviours that were happening with unions.</li>
+</ul>
+<p>Note: interestingly this also fixes <a href="https://github.com/pytest-dev/pytest/issues/5054">pytest#5054</a>.</p>
+<h3 id="163-minor-exception-enhancement">1.6.3 - Minor exception enhancement<a class="headerlink" href="#163-minor-exception-enhancement" title="Permanent link">&para;</a></h3>
+<p>Improved the error message when the name template is wrong in <code>@cases_generator</code>. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/39">#39</a>.</p>
+<h3 id="162-bug-fixes">1.6.2 - bug fixes<a class="headerlink" href="#162-bug-fixes" title="Permanent link">&para;</a></h3>
+<p><code>fixture_union</code>:</p>
+<ul>
+<li>
+<p>Changed the repr of <code>NOT_USED</code> to <code>pytest_cases.NOT_USED</code>.</p>
+</li>
+<li>
+<p><code>@pytest_fixture_plus</code> now correctly handles the <code>NOT_USED</code> when fixtures in the union do not contain any parameter. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/38">#38</a>.</p>
+</li>
+</ul>
+<p><code>param_fixtures</code>:</p>
+<ul>
+<li>
+<p><code>param_fixtures</code> now delegates to <code>param_fixture</code> when a single parameter name is provided. This is more consistent. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/36">#36</a>.</p>
+</li>
+<li>
+<p><code>param_fixture[s]</code> now support all arguments from <code>fixture</code> (<code>scope</code> and <code>autouse</code> in particular).</p>
+</li>
+</ul>
+<h3 id="161-pytest_fixture_plus-improvement-to-handle-not_used-cases">1.6.1 - <code>@pytest_fixture_plus</code> improvement to handle <code>NOT_USED</code> cases<a class="headerlink" href="#161-pytest_fixture_plus-improvement-to-handle-not_used-cases" title="Permanent link">&para;</a></h3>
+<p>Fixed issue where fixtures get called with <code>NOT_USED</code> as a parameter when using a <code>fixture_union</code>. This issue is actually only fixed in <code>@pytest_fixture_plus</code>, if you use <code>@pytest.fixture</code> you have to handle it manually. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/37">#37</a>.</p>
+<h3 id="160-fixture_union-and-param_fixtures-bugfix">1.6.0 - <code>fixture_union</code> and <code>param_fixture[s]</code> bugfix<a class="headerlink" href="#160-fixture_union-and-param_fixtures-bugfix" title="Permanent link">&para;</a></h3>
+<p>New <code>fixture_union</code> method to create a fixture that is the union/combination of other fixtures. This is an attempt to solve <a href="https://docs.pytest.org/en/latest/proposals/parametrize_with_fixtures.html">this pytest proposal</a>.</p>
+<p>Also, <code>param_fixture</code> and <code>param_fixtures</code> can now be used without necessarily storing the return value into a variable: they will automatically register the created fixtures in the calling module.  </p>
+<p>Finally, fixed a bug with <code>param_fixtures</code> when called to create a fixture for a single parameter.</p>
+<h3 id="151-param_fixtures-bugfix">1.5.1 - <code>param_fixtures</code> bugfix<a class="headerlink" href="#151-param_fixtures-bugfix" title="Permanent link">&para;</a></h3>
+<p>Fixed <code>param_fixtures</code> issue: all parameter values were identical to the last parameter of the tuple. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/32">#32</a>.</p>
+<h3 id="150-new-helpers-param_fixture-and-param_fixtures">1.5.0 - new helpers <code>param_fixture</code> and <code>param_fixtures</code><a class="headerlink" href="#150-new-helpers-param_fixture-and-param_fixtures" title="Permanent link">&para;</a></h3>
+<p>Following <a href="https://github.com/Sup3rGeo">Sup3rGeo</a>'s proposal, introduced two helper methods to create simple "parameter fixtures". Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/31">#31</a>.</p>
+<h3 id="142-parametrized-pytest_fixture_plus-minor-bug-fix">1.4.2 - parametrized <code>@pytest_fixture_plus</code> minor bug fix<a class="headerlink" href="#142-parametrized-pytest_fixture_plus-minor-bug-fix" title="Permanent link">&para;</a></h3>
+<p><code>@pytest_fixture_plus</code> now correctly honors parameter id and marks overridden at single parameter level using <code>pytest.param</code>. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/30">#30</a>.</p>
+<h3 id="141-parametrized-pytest_fixture_plus-minor-bug-fix">1.4.1 - parametrized <code>@pytest_fixture_plus</code> minor bug fix<a class="headerlink" href="#141-parametrized-pytest_fixture_plus-minor-bug-fix" title="Permanent link">&para;</a></h3>
+<p>Fixed <code>@pytest_fixture_plus</code> in case it is used with <code>parametrize</code> and one parameter is itself customized using <code>pytest.param</code>. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/29">#29</a>.</p>
+<h3 id="140-pytest_fixture_plus-major-improvement">1.4.0 - <code>@pytest_fixture_plus</code> major improvement<a class="headerlink" href="#140-pytest_fixture_plus-major-improvement" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Major improvement of <code>@pytest_fixture_plus</code>: instead of generating fixtures, it now correctly parametrizes the fixture. Skip/fail Marks are correctly copied too. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/28">#28</a>.</p>
+</li>
+<li>
+<p><code>pytest_fixture_plus</code> does not accept the <code>params</code> and <code>ids</code> arguments any more, it only relies on parametrization marks.</p>
+</li>
+</ul>
+<h3 id="133-parametrized-pytest_fixture_plus-bugfix">1.3.3 - parametrized <code>@pytest_fixture_plus</code> Bugfix<a class="headerlink" href="#133-parametrized-pytest_fixture_plus-bugfix" title="Permanent link">&para;</a></h3>
+<p>Fixed minor bug with parametrized <code>@pytest_fixture_plus</code>: spaces are now correctly removed when multiple parameter names are provided in the same <code>parametrize</code> call. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/27">#27</a>.</p>
+<h3 id="132-parametrized-pytest_fixture_plus-bugfix">1.3.2 - parametrized <code>@pytest_fixture_plus</code> Bugfix<a class="headerlink" href="#132-parametrized-pytest_fixture_plus-bugfix" title="Permanent link">&para;</a></h3>
+<p>Fixed bug with <code>@pytest_fixture_plus</code> when used in parametrized mode. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/26">#26</a>. Thanks <a href="https://github.com/Sup3rGeo">Sup3rGeo</a>!</p>
+<h3 id="131-minor-dependency-change">1.3.1 - Minor dependency change<a class="headerlink" href="#131-minor-dependency-change" title="Permanent link">&para;</a></h3>
+<p>Now using <code>decopatch</code> to create the decorators.</p>
+<h3 id="130-more-flexible-case-generators-names-minor-dependency-change">1.3.0 - More flexible case generators names + Minor dependency change<a class="headerlink" href="#130-more-flexible-case-generators-names-minor-dependency-change" title="Permanent link">&para;</a></h3>
+<p>Cases generators can now support explicit name lists, and name generator callables, in addition to the name template strings. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/24">#24</a>.</p>
+<p>Dependency to <code>decorator</code> has been dropped and replaced with <code>makefun</code>. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/25">#25</a>.</p>
+<h3 id="122-fixed-bug-with-marks-on-cases-with-pytest-33">1.2.2 - fixed bug with marks on cases with pytest 3.3<a class="headerlink" href="#122-fixed-bug-with-marks-on-cases-with-pytest-33" title="Permanent link">&para;</a></h3>
+<p>Marks on cases are now also working with pytest 3.3. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/23">#23</a>.</p>
+<p>Ids for marked tests are now better managed. A new function <code>get_pytest_parametrize_args</code> is now used to transform the list of cases obtained by <code>get_all_cases(module)</code>, into the list of marked cases and ids required by <code>@pytest.mark.parametrize</code>. The doc has been updated to explain this for advanced users wishing to perform this step manually.</p>
+<h3 id="121-fixed-id-of-test-cases-with-marks">1.2.1 - fixed id of test cases with marks<a class="headerlink" href="#121-fixed-id-of-test-cases-with-marks" title="Permanent link">&para;</a></h3>
+<p>Id of test cases with marks was appearing as <code>ParameterSet</code>. Fixed it.</p>
+<h3 id="120-pytestmark-can-be-used-on-cases-pytest_fixture_plus-parametrization-order-bugfix">1.2.0 - @pytest.mark can be used on cases + @pytest_fixture_plus parametrization order bugfix<a class="headerlink" href="#120-pytestmark-can-be-used-on-cases-pytest_fixture_plus-parametrization-order-bugfix" title="Permanent link">&para;</a></h3>
+<p>Pytest marks such as <code>@pytest.mark.skipif</code> can now be used on case functions. As a consequence, <code>get_all_cases</code> is now the recommended function to use instead of <code>extract_cases_from_module</code> to perform manual collection. Indeed <code>get_all_cases</code> correctly prepares the resulting parameters list so that pytest sees the marks. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/21">#21</a>. </p>
+<p>Fixed parametrization order when <code>@pytest_fixture_plus</code> is used with several <code>@pytest.mark.parametrize</code>. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/22">#22</a>.</p>
+<h3 id="111-improved-generated-fixture-names-for-pytest_fixture_plus">1.1.1 - Improved generated fixture names for <code>@pytest_fixture_plus</code><a class="headerlink" href="#111-improved-generated-fixture-names-for-pytest_fixture_plus" title="Permanent link">&para;</a></h3>
+<p>When <code>@pytest_fixture_plus</code> is used on a function marked as parametrized, some fixtures are generated (one for each parameter). Generated fixture names now follow the pattern <code>&lt;fixturename&gt;__&lt;paramname&gt;</code>.
+Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/20">#20</a>.</p>
+<h3 id="110-new-pytest_fixture_plus">1.1.0 - New <code>@pytest_fixture_plus</code><a class="headerlink" href="#110-new-pytest_fixture_plus" title="Permanent link">&para;</a></h3>
+<p>New decorator <code>@pytest_fixture_plus</code> allows to use several <code>@pytest.mark.parametrize</code> on a fixture. Therefore one can use multiple <code>@cases_data</code> decorators, too. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/19">#19</a>.
+<em>Note: this is a temporary feature, that will be removed if/when <a href="https://github.com/pytest-dev/pytest/issues/3960">pytest supports it</a>.</em></p>
+<h3 id="100-cases_fixture-pytest-2x-support">1.0.0 - <code>@cases_fixture</code> + pytest 2.x support<a class="headerlink" href="#100-cases_fixture-pytest-2x-support" title="Permanent link">&para;</a></h3>
+<p>Pytest 2.x is now supported. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/14">#14</a>.</p>
+<p><strong>New feature:</strong> <code>@cases_fixture</code> ! Now you can put your cases data retrieval in a fixture so that its duration does not enter into the test duration. This is particularly interesting if you use <a href="https://smarie.github.io/python-pytest-harvest/">pytest-harvest</a> to create benchmarks: you probably do not want the case data retrieval/parsing to be counted in the test duration, especially if you use caching on the case function to accelerate subsequent retrievals. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/15">#15</a>.</p>
+<h3 id="0101-minor-encoding-issue-in-setuppy">0.10.1 - minor encoding issue in setup.py<a class="headerlink" href="#0101-minor-encoding-issue-in-setuppy" title="Permanent link">&para;</a></h3>
+<h3 id="0100-support-for-python-2">0.10.0 - support for python 2<a class="headerlink" href="#0100-support-for-python-2" title="Permanent link">&para;</a></h3>
+<p>Python 2 is now supported. Fixed <a href="https://github.com/smarie/python-pytest-cases/issues/3">#3</a>. </p>
+<ul>
+<li>Note: <code>CaseData</code>, <code>Given</code>, <code>ExpectedNormal</code>, <code>ExpectedError</code>, and <code>MultipleStepsCaseData</code> type hints is not created in python 2 and python&lt;3.5</li>
+</ul>
+<h3 id="091-pytest-steps-is-now-an-independent-project">0.9.1 - pytest-steps is now an independent project<a class="headerlink" href="#091-pytest-steps-is-now-an-independent-project" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Light refactoring: some internal function names are now private, and there are now two submodules.</li>
+<li><a href="https://smarie.github.io/python-pytest-steps/">pytest-steps</a> is now an independent project. Examples in the documentation have been updated</li>
+<li>New documentation page: API reference</li>
+</ul>
+<h3 id="080-filtering-can-now-be-done-using-a-callable">0.8.0 - Filtering can now be done using a callable.<a class="headerlink" href="#080-filtering-can-now-be-done-using-a-callable" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>@cases_data</code>: the <code>filter</code> argument now contains a filtering function. WARNING: the previous behaviour is still available but has been renamed <code>has_tag</code>. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/8">#8</a>.</li>
+</ul>
+<h3 id="070-hardcoded-cases-selection-and-multi-module-selection">0.7.0 - Hardcoded cases selection, and multi-module selection<a class="headerlink" href="#070-hardcoded-cases-selection-and-multi-module-selection" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>@cases_data</code> has a new parameters <code>cases</code> that can be used to hardcode a case or a list of cases. Its <code>module</code> parameter can also now take a list of modules</li>
+</ul>
+<h3 id="060-case-parameters-and-better-test-suites">0.6.0 - Case parameters and better test suites<a class="headerlink" href="#060-case-parameters-and-better-test-suites" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>get_for</code> is deprecated: it was too specific to a given case data format.</li>
+<li><code>MultipleStepsCaseData</code> was fixed to also support multiple inputs.</li>
+<li>Case functions can now have parameters (even case generators). This is particularly useful for test suites. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/9">#9</a>.</li>
+</ul>
+<h3 id="050-support-for-test-suites">0.5.0 - support for test suites<a class="headerlink" href="#050-support-for-test-suites" title="Permanent link">&para;</a></h3>
+<ul>
+<li>test functions can now be decorated with <code>@test_steps</code> to easily define a test suite with several steps. This fixes <a href="https://github.com/smarie/python-pytest-cases/issues/7">#7</a>.</li>
+</ul>
+<h3 id="040-support-for-data-caching-with-lru_cache">0.4.0 - support for data caching with lru_cache<a class="headerlink" href="#040-support-for-data-caching-with-lru_cache" title="Permanent link">&para;</a></h3>
+<ul>
+<li>cases can now be decorated with <code>@lru_cache</code>. <code>@cases_generator</code> also provides a <code>lru_cache</code> parameter to enable caching. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/6">#6</a>.</li>
+</ul>
+<h3 id="030-case-generators">0.3.0 - case generators<a class="headerlink" href="#030-case-generators" title="Permanent link">&para;</a></h3>
+<ul>
+<li>New decorator <code>@cases_generator</code> to define case generators. Fixes <a href="https://github.com/smarie/python-pytest-cases/issues/1">#1</a>.</li>
+<li>Also, removed unused functions <code>is_expected_error_instance</code> and <code>assert_exception_equal</code></li>
+</ul>
+<h3 id="020-this_module-constant-taggingfiltering-doc">0.2.0 - THIS_MODULE constant + Tagging/Filtering + doc<a class="headerlink" href="#020-this_module-constant-taggingfiltering-doc" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>New constant <code>THIS_MODULE</code> so that cases and test functions can coexist in the same file. This fixes <a href="https://github.com/smarie/python-pytest-cases/issues/5">#5</a>.</p>
+</li>
+<li>
+<p>Added <code>@test_target</code> and <code>@case_tags</code> decorators for case functions, and added <code>filter</code> parameter in <code>@cases_data</code>. This allows users to :</p>
+<ul>
+<li>tag a case function with any item (and in particular with the reference to the function it relates to), </li>
+<li>and to filter the case functions used by a test function according to a particular tag.</li>
+</ul>
+</li>
+</ul>
+<p>This fixes <a href="https://github.com/smarie/python-pytest-cases/issues/4">#4</a>.</p>
+<ul>
+<li>Improved documentation</li>
+</ul>
+<h3 id="010-first-public-version">0.1.0 - First public version<a class="headerlink" href="#010-first-public-version" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Initial fork from private repo</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>
